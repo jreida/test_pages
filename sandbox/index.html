@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Two Column Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #004b8d;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 90vh;
+    }
+
+    .main {
+      flex: 2;
+      background-color: #f4f4f4;
+      padding: 2rem;
+      border-right: 2px solid #ccc;
+    }
+
+    .sidebar {
+      flex: 1;
+      background-color: #e0e0e0;
+      padding: 2rem;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .main {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Header Section</h1>
+    <p>This is the header area — it spans the full width of the page.</p>
+  </header>
+
+  <div class="container">
+    <div class="main">
+      <h2>Main Content Area (2/3 width)</h2>
+      <p>
+        This is the main body content area. It takes up approximately two-thirds of the page width on larger screens.
+      </p>
+      <p>
+        You can place your primary page content here, such as articles, forms, or product descriptions.
+      </p>
+      <p>
+        On smaller screens, this section will appear above the sidebar to ensure readability and accessibility.
+      </p>
+      <button id="help-drawer__btn-chat">Test button</button>
+    </div>
+
+    <div class="sidebar">
+      <h2>Sidebar Area (1/3 width)</h2>
+      <iframe src="https://us01ccistatic.zoom.us/us01cci/web-sdk/full-page.html?env=us01&apikey=lhhdVQEoSie35o9QeN9FCg&fullScreenId=0kY_U-XKR0K6T3DZ5rcHGw"></iframe>
+      <p>
+        This is the sidebar content area. It takes up about one-third of the page width on larger screens.
+      </p>
+      <p>
+        You can use this section for navigation links, related information, or calls to action.
+      </p>
+      <p>
+        On smaller screens, it will stack below the main content.
+      </p>
+    </div>
+  </div>
+  <!-- <script data-apikey="JDyHWozfS_u5JDOlCqXVkg" data-env="us01" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js"></script> Production SDK-->
+  <script data-apikey="lhhdVQEoSie35o9QeN9FCg" data-env="us01" src="https://us01ccistatic.zoom.us/us01cci/web-sdk/zcc-sdk.js"></script>  <!-- Sandbox SDK -->
+</body>
+</html>
